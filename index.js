@@ -1,15 +1,13 @@
-//console.log(`I'm Connected`);
-
 const yourOrder = prompt(
   `Place Your Order`,
-  `vanilla vanilla vanilla strawberry coffee coffee`
+  `vanilla vanilla vanilla strawberry coffee coffee vanilla strawberry coffee`
 );
-console.log(yourOrder[0]);
 
 const flavorsOrdered = yourOrder.split(` `);
 console.log(flavorsOrdered);
 
-// MAKE AN OBJECT to hold [yourOrder]
+flavorsOrdered.sort();
+//console.log(flavorsOrdered);
 
 const makeObj = () => {
   let count = 1;
@@ -29,7 +27,3 @@ const makeObj = () => {
   console.log(objOrder);
 };
 makeObj();
-
-// Does not work correctly unless [yourOrder] is grouped by flavor types.
-// Need to seperate out like flavors into seperate groups
-// Need to distiguish all keys.
